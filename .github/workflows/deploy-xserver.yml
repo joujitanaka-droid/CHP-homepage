@@ -1,0 +1,88 @@
+name: Deploy to Xserver
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "wp-theme/CHP/**"
+      - ".github/workflows/deploy-xserver.yml"
+  workflow_dispatch:
+    inputs:
+      target:
+        description: "Deploy target"
+        required: true
+        default: "chp"
+        type: choice
+        options:
+          - chp
+
+concurrency:
+  group: deploy-xserver-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment: production
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Preflight checks
+        shell: bash
+        env:
+          XSERVER_FTP_HOST: ${{ vars.XSERVER_FTP_HOST }}
+          XSERVER_FTP_USERNAME: ${{ vars.XSERVER_FTP_USERNAME }}
+          XSERVER_FTP_PASSWORD: ${{ vars.XSERVER_FTP_PASSWORD }}
+          XSERVER_FTP_PROTOCOL: ${{ vars.XSERVER_FTP_PROTOCOL || 'ftps' }}
+          XSERVER_FTP_PORT: ${{ vars.XSERVER_FTP_PORT || 21 }}
+          XSERVER_CHILD_THEME_DIR: /chp-recycle.com/public_html/wp-content/themes/CHP/
+        run: |
+          set -euo pipefail
+
+          echo "Deploy target: wp-theme/CHP"
+          echo "Protocol: ${XSERVER_FTP_PROTOCOL}"
+          echo "Port: ${XSERVER_FTP_PORT}"
+          echo "Server dir: ${XSERVER_CHILD_THEME_DIR}"
+
+          if [[ ! -d "wp-theme/CHP" ]]; then
+            echo "ERROR: local-dir wp-theme/CHP does not exist."
+            exit 1
+          fi
+
+          if [[ -z "${XSERVER_FTP_HOST}" ]]; then
+            echo "ERROR: Variable XSERVER_FTP_HOST is not set."
+            exit 1
+          fi
+
+          if [[ -z "${XSERVER_FTP_USERNAME}" ]]; then
+            echo "ERROR: Variable XSERVER_FTP_USERNAME is not set."
+            exit 1
+          fi
+
+          if [[ -z "${XSERVER_FTP_PASSWORD}" ]]; then
+            echo "ERROR: Variable XSERVER_FTP_PASSWORD is not set."
+            exit 1
+          fi
+
+          if [[ "${XSERVER_FTP_PROTOCOL}" != "ftp" && "${XSERVER_FTP_PROTOCOL}" != "ftps" ]]; then
+            echo "ERROR: XSERVER_FTP_PROTOCOL must be ftp or ftps."
+            exit 1
+          fi
+
+      - name: Deploy CHP child theme via FTP/FTPS
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ vars.XSERVER_FTP_HOST }}
+          username: ${{ vars.XSERVER_FTP_USERNAME }}
+          password: ${{ vars.XSERVER_FTP_PASSWORD }}
+          protocol: ${{ vars.XSERVER_FTP_PROTOCOL || 'ftps' }}
+          port: ${{ vars.XSERVER_FTP_PORT || 21 }}
+          local-dir: ./wp-theme/CHP/
+          server-dir: /chp-recycle.com/public_html/wp-content/themes/CHP/
+          exclude: |
+            **/.git*
+            **/.github/**
+            **/node_modules/**
+            **/.vscode/**
