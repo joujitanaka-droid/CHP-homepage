@@ -12,7 +12,7 @@
      4. 表示されたURLをコピーして下記に貼り付ける
 
    ======================================================== */
-const SPREADSHEET_CSV_URL = 'YOUR_SPREADSHEET_CSV_URL_HERE';
+const SPREADSHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSLTVwUO53ji9HV7_qlOVJNEPXjRksn4I6RWhGiCJZ7qEDCGXzwhMLiOTItoJ76BgQvRnUKgecZFvK_/pub?gid=28358378&single=true&output=csv';
 // 例: 'https://docs.google.com/spreadsheets/d/1ABCxyz123/pub?output=csv'
 
 
