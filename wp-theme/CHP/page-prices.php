@@ -168,7 +168,7 @@
     <span class="fixed-cta__icon">💬</span>
     <span class="fixed-cta__label">LINE査定</span>
   </a>
-  <a href="https://maps.google.com/maps?q=京都府城陽市寺田金尾60-6" target="_blank" rel="noopener noreferrer" class="fixed-cta__btn fixed-cta__btn--map">
+  <a href="https://www.google.com/maps?q=34.8476305,135.7646817" target="_blank" rel="noopener noreferrer" class="fixed-cta__btn fixed-cta__btn--map">
     <span class="fixed-cta__icon">📍</span>
     <span class="fixed-cta__label">地図</span>
   </a>

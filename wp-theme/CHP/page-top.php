@@ -238,7 +238,7 @@
     <div class="access-grid">
       <div class="access-map">
         <iframe
-          src="https://maps.google.com/maps?q=%E4%BA%AC%E9%83%BD%E5%BA%9C%E5%9F%8E%E9%99%BD%E5%B8%82%E5%AF%BA%E7%94%B060-6&output=embed&z=16&hl=ja"
+          src="https://maps.google.com/maps?q=34.8476305,135.7646817&hl=ja&z=18&output=embed"
           width="100%" height="350"
           allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
@@ -262,7 +262,7 @@
           <span class="access-label">📅 定休日</span>
           <span class="access-value">土・日・祝日</span>
         </div>
-        <a href="https://maps.google.com/maps?q=京都府城陽市寺田金尾60-6" target="_blank" rel="noopener noreferrer" class="btn btn-blue">
+        <a href="https://www.google.com/maps?q=34.8476305,135.7646817" target="_blank" rel="noopener noreferrer" class="btn btn-blue">
           🗺️ Googleマップで開く
         </a>
       </div>
@@ -305,7 +305,7 @@
     <span class="fixed-cta__icon">💬</span>
     <span class="fixed-cta__label">LINE査定</span>
   </a>
-  <a href="https://maps.google.com/maps?q=京都府城陽市寺田金尾60-6" target="_blank" rel="noopener noreferrer" class="fixed-cta__btn fixed-cta__btn--map">
+  <a href="https://www.google.com/maps?q=34.8476305,135.7646817" target="_blank" rel="noopener noreferrer" class="fixed-cta__btn fixed-cta__btn--map">
     <span class="fixed-cta__icon">📍</span>
     <span class="fixed-cta__label">地図</span>
   </a>
