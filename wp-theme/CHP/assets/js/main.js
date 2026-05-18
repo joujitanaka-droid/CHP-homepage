@@ -12,7 +12,7 @@
      4. 表示されたURLをコピーして下記に貼り付ける
 
    ======================================================== */
-const SPREADSHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSLTVwUO53jI9HV7_qlOVJNEPXjRksn4I6RWhGiCJZ7qEDCGXzwhMLi0TltoJ76BgQvRnUKgecZFvK_/pub?gid=28358378&single=true&output=csv';
+const SPREADSHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSBfDH58b_jX1ElHjiHijoJGOKXL3VuyQteE0wfLjK7ATQkv-A-PzkbQ8h1-S-i-91H-1dJxvQuttuH/pub?gid=766720699&single=true&output=csv';
 // 例: 'https://docs.google.com/spreadsheets/d/1ABCxyz123/pub?output=csv'
 
 
