@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /*
  * Template Name: CHP 買取価格ページ
  * Description: 金属リサイクルセンター 金属買取価格ページ（Googleスプレッドシート連携）
@@ -29,8 +29,8 @@
              alt="金属リサイクルセンター" class="site-logo-img">
       </a>
     </div>
-    <a href="tel:0809604939" class="header-tel">
-      <span>📞</span> 080-9604-9939
+    <a href="tel:0756002874" class="header-tel">
+      <span>📞</span> 075-600-2874
     </a>
     <nav class="site-nav" aria-label="メインナビゲーション">
       <ul>
@@ -53,7 +53,7 @@
       <li><a href="<?php echo esc_url(home_url('/corporate/')); ?>">法人向け</a></li>
       <li><a href="<?php echo esc_url(home_url('/prices/')); ?>">買取価格</a></li>
     </ul>
-    <a href="tel:0809604939" class="mobile-tel">📞 080-9604-9939</a>
+    <a href="tel:0756002874" class="mobile-tel">📞 075-600-2874</a>
   </nav>
 </div>
 
@@ -90,7 +90,7 @@
       <p class="error-title">⚠️ 現在価格表を準備中です</p>
       <p class="error-note">
         最新の買取価格はお電話でご確認ください。<br>
-        <a href="tel:0809604939" style="color:var(--color-orange); font-weight:700;">📞 080-9604-9939</a>
+        <a href="tel:0756002874" style="color:var(--color-orange); font-weight:700;">📞 075-600-2874</a>
       </p>
     </div>
 
@@ -120,7 +120,7 @@
       お気軽にご連絡ください。
     </p>
     <div class="cta-buttons">
-      <a href="tel:0809604939" class="btn btn-white">📞 080-9604-9939</a>
+      <a href="tel:0756002874" class="btn btn-white">📞 075-600-2874</a>
       <a href="https://lin.ee/oHnlYya" class="btn btn-line" target="_blank" rel="noopener noreferrer">💬 LINEで査定依頼</a>
     </div>
     <p style="margin-top:16px; font-size:0.9rem; opacity:0.85;">
@@ -137,7 +137,6 @@
       <div class="footer-info">
         <h3>金属リサイクルセンター</h3>
         <p>〒610-0121 京都府城陽市寺田金尾60-6</p>
-        <p>TEL: <a href="tel:0809604939">080-9604-9939</a></p>
         <p>営業時間: 7:30〜18:00（土日祝 定休）</p>
         <p>古物商許可: 京都府公安委員会許可 第611092230062号</p>
         <p>登録番号: T9130001072348</p>
@@ -157,7 +156,7 @@
 
 <!-- ========== 固定CTAバー（スマホ下部） ========== -->
 <div class="fixed-cta" role="navigation" aria-label="クイックアクセス">
-  <a href="tel:0809604939" class="fixed-cta__btn fixed-cta__btn--tel">
+  <a href="tel:0756002874" class="fixed-cta__btn fixed-cta__btn--tel">
     <span class="fixed-cta__icon">📞</span>
     <span class="fixed-cta__label">電話する</span>
   </a>

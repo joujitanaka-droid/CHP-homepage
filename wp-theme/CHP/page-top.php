@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /*
  * Template Name: CHP TOPページ
  * Description: 金属リサイクルセンター TOPページ
@@ -29,8 +29,8 @@
              alt="金属リサイクルセンター" class="site-logo-img">
       </a>
     </div>
-    <a href="tel:0809604939" class="header-tel">
-      <span>📞</span> 080-9604-9939
+    <a href="tel:0756002874" class="header-tel">
+      <span>📞</span> 075-600-2874
     </a>
     <nav class="site-nav" aria-label="メインナビゲーション">
       <ul>
@@ -53,7 +53,7 @@
       <li><a href="<?php echo esc_url(home_url('/corporate/')); ?>">法人向け</a></li>
       <li><a href="<?php echo esc_url(home_url('/prices/')); ?>">買取価格</a></li>
     </ul>
-    <a href="tel:0809604939" class="mobile-tel">📞 080-9604-9939</a>
+    <a href="tel:0756002874" class="mobile-tel">📞 075-600-2874</a>
   </nav>
 </div>
 
@@ -72,7 +72,7 @@
       ご家庭で使わなくなった金属製品・電化製品を査定・現金買取いたします。
     </p>
     <div class="hero-cta">
-      <a href="tel:0809604939" class="btn btn-tel">📞 今すぐ電話する</a>
+      <a href="tel:0756002874" class="btn btn-tel">📞 今すぐ電話する</a>
       <a href="#line-section" class="btn btn-line">💬 LINEで無料査定</a>
     </div>
   </div>
@@ -128,7 +128,7 @@
         運ぶのが大変なものは<strong>出張査定</strong>もさせていただきます。<br>
         まずはお気軽にご連絡ください。
       </p>
-      <a href="tel:0809604939" class="btn btn-white">📞 出張査定を依頼する</a>
+      <a href="tel:0756002874" class="btn btn-white">📞 出張査定を依頼する</a>
     </div>
   </div>
 </section>
@@ -248,7 +248,7 @@
         </div>
         <div class="access-item">
           <span class="access-label">📞 電話</span>
-          <span class="access-value"><a href="tel:0809604939">080-9604-9939</a></span>
+          <span class="access-value"><a href="tel:0756002874">075-600-2874</a></span>
         </div>
         <div class="access-item">
           <span class="access-label">🕐 営業時間</span>
@@ -274,7 +274,6 @@
       <div class="footer-info">
         <h3>金属リサイクルセンター</h3>
         <p>〒610-0121 京都府城陽市寺田金尾60-6</p>
-        <p>TEL: <a href="tel:0809604939">080-9604-9939</a></p>
         <p>営業時間: 7:30〜18:00（土日祝 定休）</p>
         <p>古物商許可: 京都府公安委員会許可 第611092230062号</p>
         <p>登録番号: T9130001072348</p>
@@ -294,7 +293,7 @@
 
 <!-- ========== 固定CTAバー（スマホ下部） ========== -->
 <div class="fixed-cta" role="navigation" aria-label="クイックアクセス">
-  <a href="tel:0809604939" class="fixed-cta__btn fixed-cta__btn--tel">
+  <a href="tel:0756002874" class="fixed-cta__btn fixed-cta__btn--tel">
     <span class="fixed-cta__icon">📞</span>
     <span class="fixed-cta__label">電話する</span>
   </a>
