@@ -25,8 +25,8 @@
   <div class="header-inner">
     <div class="header-logo">
       <a href="<?php echo esc_url(home_url('/')); ?>">
-        <span class="logo-text">金属リサイクルセンター</span>
-        <span class="logo-sub">京都府城陽市</span>
+        <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/assets/images/logo.png"
+             alt="金属リサイクルセンター" class="site-logo-img">
       </a>
     </div>
     <a href="tel:0809604939" class="header-tel">
