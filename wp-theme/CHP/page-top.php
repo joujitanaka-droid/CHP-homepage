@@ -27,6 +27,10 @@
       <a href="<?php echo esc_url(home_url('/')); ?>">
         <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/assets/images/logo.png"
              alt="金属リサイクルセンター" class="site-logo-img">
+        <div class="logo-info">
+          <span class="logo-company">株式会社CHP</span>
+          <span class="logo-store">金属リサイクルセンター</span>
+        </div>
       </a>
     </div>
     <a href="tel:0756002874" class="header-tel">
