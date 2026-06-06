@@ -178,7 +178,9 @@ async function loadPricesFromSheet() {
   }
 
   try {
-    const res = await fetch(SPREADSHEET_CSV_URL, { cache: 'no-cache' });
+    // Googleサーバー側のキャッシュを回避するためタイムスタンプを付与
+    const url = `${SPREADSHEET_CSV_URL}&t=${Date.now()}`;
+    const res = await fetch(url, { cache: 'no-cache' });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
     const csv  = await res.text();
