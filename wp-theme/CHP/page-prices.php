@@ -81,7 +81,6 @@
   <div class="container">
 
     <div class="prices-meta">
-      <span class="update-date" id="last-updated">読み込み中...</span>
       <button class="refresh-btn" id="refreshBtn" type="button">🔄 最新価格を取得</button>
     </div>
 

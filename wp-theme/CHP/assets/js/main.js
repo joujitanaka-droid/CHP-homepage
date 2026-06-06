@@ -152,7 +152,6 @@ function displayDemoData(container, lastUpdatedEl) {
     { '品目': 'モーター',           '買取価格': '',   '単位': 'kg', '更新日': today, '備考': '' },
   ];
 
-  if (lastUpdatedEl) lastUpdatedEl.textContent = `最終更新: ${today}（価格はお電話でご確認ください）`;
   container.innerHTML =
     `<div class="price-cards">${renderPriceCards(rows)}</div>` +
     renderPriceTable(rows);
@@ -166,8 +165,6 @@ async function loadPricesFromSheet() {
   const container    = document.getElementById('price-container');
   const loading      = document.getElementById('price-loading');
   const errorEl      = document.getElementById('price-error');
-  const lastUpdatedEl= document.getElementById('last-updated');
-
   if (!container) return;
 
   // URLが設定されていない場合はデモ表示
@@ -186,12 +183,6 @@ async function loadPricesFromSheet() {
     const csv  = await res.text();
     const rows = parseCSV(csv);
     if (!rows.length) throw new Error('行データなし');
-
-    // 最終更新日（最初の有効な更新日を使用）
-    const latestDate = rows.find(r => r['更新日'])?.['更新日'] || '';
-    if (lastUpdatedEl && latestDate) {
-      lastUpdatedEl.textContent = `最終更新: ${latestDate}`;
-    }
 
     container.innerHTML =
       `<div class="price-cards">${renderPriceCards(rows)}</div>` +
