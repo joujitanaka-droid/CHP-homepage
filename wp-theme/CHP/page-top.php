@@ -260,7 +260,7 @@
         </div>
         <div class="access-item">
           <span class="access-label">📅 定休日</span>
-          <span class="access-value">土・日・祝日</span>
+          <span class="access-value">日曜日</span>
         </div>
         <a href="https://www.google.com/maps?q=34.8476305,135.7646817" target="_blank" rel="noopener noreferrer" class="btn btn-blue">
           🗺️ Googleマップで開く

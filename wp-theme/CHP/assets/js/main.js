@@ -84,6 +84,7 @@ function renderPriceCards(rows) {
     const unit  = escapeHtml(row['単位']   || 'kg');
     const note  = escapeHtml(row['備考']   || '');
 
+    const date = escapeHtml(row['更新日'] || '');
     return `
       <div class="price-card">
         <div class="price-card__name">${name}</div>
@@ -92,6 +93,7 @@ function renderPriceCards(rows) {
           <span class="price-card__unit">/ ${unit}</span>
         </div>
         ${note ? `<div class="price-card__note">${note}</div>` : ''}
+        ${date ? `<div class="price-card__date">更新: ${date}</div>` : ''}
       </div>`;
   }).join('');
 }
