@@ -1,17 +1,17 @@
 ﻿<?php
 /*
  * Template Name: CHP 法人向けページ
- * Description: 金属リサイクルセンター 法人向けサービスページ
+ * Description: まちの資源ステーションCHP 法人向けサービスページ
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="工場・事業所の金属回収は金属リサイクルセンター（城陽市）にお任せください。鉄くず・ステンレス・アルミ・銅・モーターなど対応。定期回収・スポット回収・コンテナ設置も相談可能。">
+  <meta name="description" content="工場・事業所の金属回収はまちの資源ステーションCHP（城陽市）にお任せください。鉄くず・ステンレス・アルミ・銅・モーターなど対応。定期回収・スポット回収・コンテナ設置も相談可能。">
   <meta name="keywords" content="法人 金属回収 京都,工場 鉄くず 回収 城陽,スクラップ業者 京都,定期回収 金属 京都府">
-  <title>法人向け金属回収サービス | 金属リサイクルセンター（城陽市）</title>
-  <meta property="og:title"       content="法人向け金属回収 | 金属リサイクルセンター">
+  <title>法人向け金属回収サービス | まちの資源ステーションCHP（城陽市）</title>
+  <meta property="og:title"       content="法人向け金属回収 | まちの資源ステーションCHP">
   <meta property="og:description" content="工場・建設業・製造業の金属回収をサポート。定期・スポット・コンテナ設置対応。">
   <meta property="og:type"        content="website">
   <meta property="og:locale"      content="ja_JP">
@@ -20,264 +20,211 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-<!-- ========== ヘッダー ========== -->
+<a class="skip-link" href="#main">本文へスキップ</a>
+
 <header class="site-header">
-  <div class="header-inner">
-    <div class="header-logo">
+  <div class="site-header__inner">
+    <div class="site-logo">
       <a href="<?php echo esc_url(home_url('/')); ?>">
         <img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/assets/images/logo.png"
-             alt="金属リサイクルセンター" class="site-logo-img">
-        <div class="logo-info">
-          <span class="logo-company">株式会社CHP</span>
-          <span class="logo-store">金属リサイクルセンター</span>
-        </div>
+             alt="まちの資源ステーションCHP" class="site-logo__img">
+        <span class="site-logo__text">
+          <span class="site-logo__main">まちの資源ステーションCHP</span>
+        </span>
       </a>
     </div>
-    <a href="tel:0756002874" class="header-tel">
-      <span>📞</span> 075-600-2874
-    </a>
-    <nav class="site-nav" aria-label="メインナビゲーション">
+
+    <nav class="global-nav" aria-label="グローバルナビゲーション">
       <ul>
         <li><a href="<?php echo esc_url(home_url('/')); ?>">TOP</a></li>
-        <li><a href="<?php echo esc_url(home_url('/corporate/')); ?>" class="active">法人向け</a></li>
+        <li><a href="<?php echo esc_url(home_url('/corporate/')); ?>" aria-current="page">法人向け</a></li>
         <li><a href="<?php echo esc_url(home_url('/prices/')); ?>">買取価格</a></li>
       </ul>
     </nav>
-    <button class="menu-btn" id="menuBtn" aria-label="メニューを開く">
+
+    <div class="header-contact">
+      <a class="header-contact__tel" href="tel:0756002874">
+        <span class="header-contact__telnum">TEL. 075-600-2874</span>
+        <span class="header-contact__telnote">受付時間 9:00～17:00</span>
+      </a>
+      <a class="btn btn--line" href="https://lin.ee/oHnlYya" target="_blank" rel="noopener noreferrer">LINEで相談</a>
+    </div>
+
+    <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 </header>
 
-<!-- モバイルナビ -->
-<div class="nav-overlay" id="navOverlay" role="dialog" aria-label="ナビゲーション">
-  <nav class="mobile-nav">
-    <ul>
-      <li><a href="<?php echo esc_url(home_url('/')); ?>">TOP</a></li>
-      <li><a href="<?php echo esc_url(home_url('/corporate/')); ?>">法人向け</a></li>
-      <li><a href="<?php echo esc_url(home_url('/prices/')); ?>">買取価格</a></li>
-    </ul>
-    <a href="tel:0756002874" class="mobile-tel">📞 075-600-2874</a>
-  </nav>
-</div>
-
-
-<!-- ========== パンくずリスト ========== -->
 <nav class="breadcrumb" aria-label="パンくずリスト">
-  <a href="<?php echo esc_url(home_url('/')); ?>">TOP</a>
-  <span>法人向けサービス</span>
+  <div class="container">
+    <ol>
+      <li><a href="<?php echo esc_url(home_url('/')); ?>">TOP</a></li>
+      <li>法人向けサービス</li>
+    </ol>
+  </div>
 </nav>
 
+<main id="main">
 
-<!-- ========== ヒーロー ========== -->
-<section class="hero-corp" aria-label="法人向けサービス">
-  <div class="hero-badge">工場・事業所・解体業者様向け</div>
-  <h1>工場・事業所の<br>金属回収 承ります</h1>
-  <p>
-    鉄くず・ステンレス・アルミ・銅・モーターなど、<br>
-    あらゆる金属スクラップの回収・買取に対応しています。<br>
-    定期回収からスポット対応まで、お気軽にご相談ください。
-  </p>
-  <div class="hero-cta" style="justify-content:center;">
-    <a href="tel:0756002874" class="btn btn-white">📞 今すぐ相談する</a>
-    <a href="#contact-cta" class="btn btn-line">💬 LINEで問い合わせ</a>
-  </div>
-</section>
-
-
-<!-- ========== 対応金属種別 ========== -->
-<section class="section" id="metals" aria-label="対応金属">
-  <div class="container">
-    <h2 class="section-title">対応している金属・品目</h2>
-    <div class="service-grid">
-      <div class="service-card">
-        <h3>⚙️ 鉄・鉄スクラップ</h3>
-        <ul>
-          <li>鉄くず・スクラップ全般</li>
-          <li>H鋼・アングル・パイプ</li>
-          <li>プレス材・切断材</li>
-          <li>機械設備・産業機械</li>
-          <li>廃材・建設残材</li>
-        </ul>
-      </div>
-      <div class="service-card">
-        <h3>✨ 非鉄金属</h3>
-        <ul>
-          <li>ステンレス（SUS）全種</li>
-          <li>アルミ（板・押出・ダイカスト）</li>
-          <li>銅（ピカ銅・並銅・被覆線）</li>
-          <li>真鍮（黄銅）各種</li>
-          <li>鉛・亜鉛・ニッケル</li>
-        </ul>
-      </div>
-      <div class="service-card">
-        <h3>🔌 電気・機械系</h3>
-        <ul>
-          <li>モーター（各種サイズ）</li>
-          <li>電線・ケーブル類</li>
-          <li>電気設備機器</li>
-          <li>工具類（金属製）</li>
-          <li>コンプレッサー・ポンプ類</li>
-        </ul>
+  <section class="page-hero">
+    <div class="container">
+      <p class="page-hero__label">FOR BUSINESS</p>
+      <h1>工場・事業所から発生する金属資源を適正に回収します</h1>
+      <p class="page-hero__lead">
+        鉄、ステンレス、アルミ、銅、真鍮、電線、加工端材、切粉、廃機械など、種類や数量に応じて適切な回収方法をご提案します。
+      </p>
+      <div class="section__cta content-buttons">
+        <a class="btn btn--hero btn--outline-light" href="tel:0756002874">📞 電話で相談する</a>
+        <a class="btn btn--hero btn--line" href="https://lin.ee/oHnlYya" target="_blank" rel="noopener noreferrer">💬 LINEで相談する</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-<!-- ========== 対応サービス ========== -->
-<section class="section section--gray" id="services" aria-label="対応サービス">
-  <div class="container">
-    <h2 class="section-title">サービス内容</h2>
-    <div class="service-grid">
-      <div class="service-card" style="border-left-color: var(--color-orange);">
-        <h3 style="color:var(--color-orange);">🔄 定期回収</h3>
-        <ul>
-          <li>月1回・週1回など定期サイクルで回収</li>
-          <li>スクラップヤードの定期整理</li>
-          <li>継続的な金属排出先として対応</li>
-          <li>回収量・頻度はご要望に合わせて調整</li>
-        </ul>
-      </div>
-      <div class="service-card" style="border-left-color: var(--color-orange);">
-        <h3 style="color:var(--color-orange);">📦 スポット回収</h3>
-        <ul>
-          <li>工場整理・倉庫整理時のまとめて回収</li>
-          <li>機械撤去・設備解体後の金属引き取り</li>
-          <li>突発的な大量発生にも対応</li>
-          <li>解体業・建設業の廃材引き取り</li>
-        </ul>
-      </div>
-      <div class="service-card" style="border-left-color: var(--color-orange);">
-        <h3 style="color:var(--color-orange);">🏭 持込・コンテナ設置</h3>
-        <ul>
-          <li>工場・事業所への回収コンテナ設置</li>
-          <li>持込買取にも対応</li>
-          <li>コンテナサイズ・設置場所はご相談</li>
-          <li>満杯になったら回収に伺います</li>
-        </ul>
-      </div>
+  <section class="content-block">
+    <div class="container content-narrow">
+      <p>
+        工場、事業所、建設現場、設備工事などで発生する金属資源の回収・買取に対応しています。
+        回収時には、車両の通行、作業時間、騒音、積込み方法など、周辺環境への配慮を重視します。
+      </p>
     </div>
-  </div>
-</section>
+  </section>
 
-
-<!-- ========== 対応業種 ========== -->
-<section class="section" id="industries" aria-label="対応業種">
-  <div class="container">
-    <h2 class="section-title">こんな業種・事業者様から<br>ご利用いただいています</h2>
-    <div class="industries-grid">
-      <div class="industry-tag">🏭 製造業</div>
-      <div class="industry-tag">🔨 建設業</div>
-      <div class="industry-tag">🔧 設備工事業</div>
-      <div class="industry-tag">💥 解体業</div>
-      <div class="industry-tag">🚜 農業・農機具業者</div>
-      <div class="industry-tag">⚡ 電気工事業</div>
-      <div class="industry-tag">🏗️ 鉄鋼関連業</div>
-      <div class="industry-tag">🔩 機械加工業</div>
-      <div class="industry-tag">♻️ リサイクル業者</div>
-      <div class="industry-tag">🏢 その他事業者</div>
+  <section class="content-block content-block--alt">
+    <div class="container">
+      <h2 class="content-block__title">対象業種</h2>
+      <ul class="chip-list">
+        <li>金属加工業</li>
+        <li>製造業</li>
+        <li>板金・製缶業</li>
+        <li>建設業</li>
+        <li>設備工事業</li>
+        <li>電気工事業</li>
+        <li>解体業</li>
+        <li>自動車整備業</li>
+        <li>倉庫・物流業</li>
+      </ul>
     </div>
-  </div>
-</section>
+  </section>
 
+  <section class="content-block">
+    <div class="container">
+      <h2 class="content-block__title">対象品目</h2>
+      <ul class="chip-list">
+        <li>鉄くず</li>
+        <li>ステンレス端材</li>
+        <li>アルミ端材</li>
+        <li>銅</li>
+        <li>真鍮</li>
+        <li>電線</li>
+        <li>ケーブル</li>
+        <li>切粉</li>
+        <li>ダライ粉</li>
+        <li>プレス端材</li>
+        <li>モーター</li>
+        <li>廃機械</li>
+        <li>設備</li>
+      </ul>
+    </div>
+  </section>
 
-<!-- ========== ご利用の流れ ========== -->
-<section class="section section--blue" id="process" aria-label="利用の流れ">
-  <div class="container">
-    <h2 class="section-title section-title--white">ご利用の流れ</h2>
-    <div class="process-steps" style="max-width:600px; margin:0 auto;">
-      <div class="process-step">
-        <div class="process-step__num">1</div>
-        <div class="process-step__body">
-          <h4>お問い合わせ</h4>
-          <p>電話またはLINEにて、回収したい金属の種類・量・場所をお知らせください。写真を送っていただくとスムーズです。</p>
+  <section class="content-block content-block--alt">
+    <div class="container">
+      <h2 class="content-block__title content-block__title--center">サービス内容</h2>
+      <div class="card-grid card-grid--values">
+        <div class="card">
+          <h3>定期回収</h3>
+          <p>定めた周期で回収します。</p>
+        </div>
+        <div class="card">
+          <h3>スポット回収</h3>
+          <p>設備入替えや工場整理時に対応します。</p>
+        </div>
+        <div class="card">
+          <h3>コンテナ設置</h3>
+          <p>排出量、設置場所、品目に応じて提案します。</p>
+        </div>
+        <div class="card">
+          <h3>現地確認・見積り</h3>
+          <p>写真または現地確認により条件を確認します。</p>
         </div>
       </div>
-      <div class="process-step">
-        <div class="process-step__num">2</div>
-        <div class="process-step__body">
-          <h4>現場確認・お見積もり</h4>
-          <p>現場を確認のうえ、回収品目・量・方法についてお見積もりをご提示します。</p>
-        </div>
-      </div>
-      <div class="process-step">
-        <div class="process-step__num">3</div>
-        <div class="process-step__body">
-          <h4>日程調整・回収作業</h4>
-          <p>ご都合に合わせて日程を調整。ご指定の場所まで回収に伺います。</p>
-        </div>
-      </div>
-      <div class="process-step">
-        <div class="process-step__num">4</div>
-        <div class="process-step__body">
-          <h4>精算・お支払い</h4>
-          <p>計量・確認後、その場で現金にてお支払いします（買取の場合）。</p>
-        </div>
+      <div class="section__cta">
+        <a class="btn btn--primary" href="tel:0756002874">電話で相談する</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-<!-- ========== お問い合わせCTA ========== -->
-<section class="cta-section" id="contact-cta" aria-label="お問い合わせ">
-  <div class="container">
-    <h2>まずはお気軽にご相談ください</h2>
-    <p>
-      回収品目・数量・エリアなどお気軽にご連絡ください。<br>
-      定期回収・単発・コンテナ設置など、ご要望に応じてご提案します。
-    </p>
-    <div class="cta-buttons">
-      <a href="tel:0756002874" class="btn btn-white">📞 075-600-2874</a>
-      <a href="https://lin.ee/oHnlYya" class="btn btn-line" target="_blank" rel="noopener noreferrer">💬 LINEで問い合わせ</a>
+  <section class="content-block">
+    <div class="container">
+      <h2 class="content-block__title content-block__title--center">CHPが選ばれる理由</h2>
+      <ol class="reason-list">
+        <li>周辺環境に配慮した回収</li>
+        <li>品目ごとの適正な分別</li>
+        <li>計量・査定内容の明確化</li>
+        <li>定期回収への対応</li>
+        <li>地域密着による迅速な対応</li>
+        <li>許可・法令に基づく適正運営</li>
+      </ol>
     </div>
-    <p style="margin-top:20px; font-size:0.9rem; opacity:0.85;">
-      営業時間: 7:30〜18:00（土日祝 定休）<br>
-      所在地: 〒610-0121 京都府城陽市寺田金尾60-6
-    </p>
-  </div>
-</section>
+  </section>
 
+  <section class="content-block content-block--alt">
+    <div class="container">
+      <h2 class="content-block__title content-block__title--center">回収の流れ</h2>
+      <ol class="step-list">
+        <li>問い合わせ</li>
+        <li>品目・数量確認</li>
+        <li>写真確認または現地確認</li>
+        <li>見積り</li>
+        <li>回収日調整</li>
+        <li>回収・計量</li>
+        <li>精算</li>
+      </ol>
+    </div>
+  </section>
 
-<!-- ========== フッター ========== -->
+  <section class="content-block">
+    <div class="container section__cta">
+      <h2 class="section__title">まずはお気軽にご相談ください</h2>
+      <div class="content-buttons">
+        <a class="btn btn--primary" href="tel:0756002874">📞 075-600-2874</a>
+        <a class="btn btn--line" href="https://lin.ee/oHnlYya" target="_blank" rel="noopener noreferrer">💬 LINEで問い合わせ</a>
+      </div>
+      <p class="items__note" style="margin-top:20px;">
+        受付時間 9:00～17:00(日曜定休) ／ 〒610-0121 京都府城陽市寺田金尾60-6
+      </p>
+    </div>
+  </section>
+
+</main>
+
 <footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-info">
-        <h3>金属リサイクルセンター</h3>
-        <p>〒610-0121 京都府城陽市寺田金尾60-6</p>
-        <p>営業時間: 7:30〜18:00（土日祝 定休）</p>
-        <p>古物商許可: 京都府公安委員会許可 第611092230062号</p>
-        <p>登録番号: T9130001072348</p>
-      </div>
-      <div class="footer-nav">
-        <ul>
-          <li><a href="<?php echo esc_url(home_url('/')); ?>">TOPページ</a></li>
-          <li><a href="<?php echo esc_url(home_url('/corporate/')); ?>">法人向けサービス</a></li>
-          <li><a href="<?php echo esc_url(home_url('/prices/')); ?>">金属買取価格</a></li>
-        </ul>
-      </div>
+  <div class="container site-footer__inner">
+    <div class="site-footer__brand">
+      <p class="site-footer__name">まちの資源ステーションCHP</p>
+      <p>運営：株式会社CHP</p>
+      <p>〒610-0121 京都府城陽市寺田金尾60-6</p>
+      <p>TEL. 075-600-2874 ／ 受付時間 9:00～17:00 ／ 定休日 日曜日</p>
+      <p>古物商許可：京都府公安委員会許可 第611092230062号</p>
+      <p>登録番号：T9130001072348</p>
     </div>
-    <p class="footer-copy">&copy; <?php echo date('Y'); ?> 金属リサイクルセンター All Rights Reserved.</p>
+
+    <nav class="site-footer__nav" aria-label="フッターナビゲーション">
+      <ul>
+        <li><a href="<?php echo esc_url(home_url('/')); ?>">TOPページ</a></li>
+        <li><a href="<?php echo esc_url(home_url('/corporate/')); ?>">法人向けサービス</a></li>
+        <li><a href="<?php echo esc_url(home_url('/prices/')); ?>">金属買取価格</a></li>
+      </ul>
+    </nav>
   </div>
+  <p class="site-footer__copyright">Copyright &copy; <?php echo esc_html(date('Y')); ?> まちの資源ステーションCHP. All Rights Reserved.</p>
 </footer>
 
-
-<!-- ========== 固定CTAバー（スマホ下部） ========== -->
-<div class="fixed-cta" role="navigation" aria-label="クイックアクセス">
-  <a href="tel:0756002874" class="fixed-cta__btn fixed-cta__btn--tel">
-    <span class="fixed-cta__icon">📞</span>
-    <span class="fixed-cta__label">電話する</span>
-  </a>
-  <a href="https://lin.ee/oHnlYya" class="fixed-cta__btn fixed-cta__btn--line" target="_blank" rel="noopener noreferrer">
-    <span class="fixed-cta__icon">💬</span>
-    <span class="fixed-cta__label">LINE問合せ</span>
-  </a>
-  <a href="https://www.google.com/maps?q=34.8476305,135.7646817" target="_blank" rel="noopener noreferrer" class="fixed-cta__btn fixed-cta__btn--map">
-    <span class="fixed-cta__icon">📍</span>
-    <span class="fixed-cta__label">地図</span>
-  </a>
+<div class="mobile-fixed-nav">
+  <a href="tel:0756002874"><span aria-hidden="true">📞</span>電話する</a>
+  <a href="https://lin.ee/oHnlYya" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">💬</span>LINE相談</a>
+  <a href="<?php echo esc_url(home_url('/prices/')); ?>"><span aria-hidden="true">💴</span>買取価格</a>
 </div>
 
 <?php wp_footer(); ?>
